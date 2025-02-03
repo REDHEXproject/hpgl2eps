@@ -60,7 +60,7 @@ PA300,300;
 
 ### Example EPS Output
 
-%!PS-Adobe-3.0 EPSF-3.0
+``` %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: 0 0 100 100
 0.2662068576 0.2662068576 scale
 newpath
@@ -70,6 +70,6 @@ newpath
 stroke
 showpage
 
-### License
+## License
 
 This project is open-source and available for modification and distribution.
