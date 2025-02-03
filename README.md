@@ -8,7 +8,7 @@ This project provides a simple C# program to convert HPGL (Hewlett-Packard Graph
 
 Reads HPGL commands from an input file.
 
-Converts basic HPGL commands (PU, PD, PA) into PostScript equivalents.
+Converts basic HPGL commands (```PU```, ```PD```, ```PA```) into PostScript equivalents.
 
 Writes the converted commands into an EPS file.
 
@@ -26,7 +26,7 @@ Place an HPGL file in the project directory and name it input.hpgl (or modify th
 
 Compile and run the program:
 
-dotnet run
+```dotnet run```
 
 The converted EPS file will be saved as output.eps in the same directory.
 
@@ -53,11 +53,11 @@ HandleCoordinates function:
 Parses coordinate values and applies a scaling factor.
 
 ### Example HPGL Input
-
+```
 PU100,100;
 PD200,200;
 PA300,300;
-
+```
 ### Example EPS Output
 
 ``` %!PS-Adobe-3.0 EPSF-3.0
@@ -69,7 +69,7 @@ newpath
 300 300 moveto
 stroke
 showpage
-
-## License ```
+```
+## License
 
 This project is open-source and available for modification and distribution.
