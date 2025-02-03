@@ -20,35 +20,37 @@ Scales the output to fit within a defined bounding box.
 
 Basic knowledge of C#.
 
-### How to Use
+## How to Use
 
-Place an HPGL file in the project directory and name it input.hpgl (or modify the inputPath variable accordingly in the code).
+Place an HPGL file in the project directory and name it input.hpgl (or modify the ```inputPath``` variable accordingly in the code).
 
 Compile and run the program:
 
-```dotnet run```
+```
+dotnet run
+```
 
 The converted EPS file will be saved as output.eps in the same directory.
 
 ### Code Explanation
 
-ConvertHPGLToEPS function:
+```ConvertHPGLToEPS``` function:
 
 Reads the HPGL file line by line.
 
-Splits commands and processes them using ConvertHPGLCommandToPostScript.
+Splits commands and processes them using ```ConvertHPGLCommandToPostScript```.
 
 Writes the corresponding PostScript commands to the EPS file.
 
-ConvertHPGLCommandToPostScript function:
+```ConvertHPGLCommandToPostScript``` function:
 
-Converts PU (Pen Up) to moveto.
+Converts ```PU``` (Pen Up) to ```moveto```.
 
-Converts PD (Pen Down) to lineto.
+Converts ```PD``` (Pen Down) to ```lineto```.
 
-Converts PA (Plot Absolute) to moveto.
+Converts ```PA``` (Plot Absolute) to ```moveto```.
 
-HandleCoordinates function:
+```HandleCoordinates``` function:
 
 Parses coordinate values and applies a scaling factor.
 
@@ -60,7 +62,8 @@ PA300,300;
 ```
 ### Example EPS Output
 
-``` %!PS-Adobe-3.0 EPSF-3.0
+```
+ %!PS-Adobe-3.0 EPSF-3.0
 %%BoundingBox: 0 0 100 100
 0.2662068576 0.2662068576 scale
 newpath
