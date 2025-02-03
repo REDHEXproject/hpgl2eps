@@ -6,53 +6,54 @@ This project provides a simple C# program to convert HPGL (Hewlett-Packard Graph
 
 ### Features
 
-Reads HPGL commands from an input file.
+• Reads HPGL commands from an input file.
 
-Converts basic HPGL commands (```PU```, ```PD```, ```PA```) into PostScript equivalents.
+• Converts basic HPGL commands (```PU```, ```PD```, ```PA```) into PostScript equivalents.
 
-Writes the converted commands into an EPS file.
+• Writes the converted commands into an EPS file.
 
-Scales the output to fit within a defined bounding box.
+• Scales the output to fit within a defined bounding box.
+
 
 ### Prerequisites
 
-.NET SDK installed on your system.
+• .NET SDK installed on your system.
 
-Basic knowledge of C#.
+• Basic knowledge of C#.
+
 
 ## How to Use
+1. Place an HPGL file in the project directory and name it input.hpgl (or modify the ```inputPath``` variable accordingly in the code).
 
-Place an HPGL file in the project directory and name it input.hpgl (or modify the ```inputPath``` variable accordingly in the code).
-
-Compile and run the program:
+2. Compile and run the program:
 
 ```
 dotnet run
 ```
+3. The converted EPS file will be saved as output.eps in the same directory.
 
-The converted EPS file will be saved as output.eps in the same directory.
 
 ### Code Explanation
 
-```ConvertHPGLToEPS``` function:
+• ```ConvertHPGLToEPS``` function:
 
-Reads the HPGL file line by line.
+  • Reads the HPGL file line by line.
 
-Splits commands and processes them using ```ConvertHPGLCommandToPostScript```.
+  • Splits commands and processes them using ```ConvertHPGLCommandToPostScript```.
 
-Writes the corresponding PostScript commands to the EPS file.
+  • Writes the corresponding PostScript commands to the EPS file.
 
-```ConvertHPGLCommandToPostScript``` function:
+• ```ConvertHPGLCommandToPostScript``` function:
 
-Converts ```PU``` (Pen Up) to ```moveto```.
+  • Converts ```PU``` (Pen Up) to ```moveto```.
 
-Converts ```PD``` (Pen Down) to ```lineto```.
+  • Converts ```PD``` (Pen Down) to ```lineto```.
 
-Converts ```PA``` (Plot Absolute) to ```moveto```.
+  • Converts ```PA``` (Plot Absolute) to ```moveto```.
 
-```HandleCoordinates``` function:
+• ```HandleCoordinates``` function:
 
-Parses coordinate values and applies a scaling factor.
+  • Parses coordinate values and applies a scaling factor.
 
 ### Example HPGL Input
 ```
