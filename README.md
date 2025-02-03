@@ -35,6 +35,7 @@ dotnet run
 
 ### Code Explanation
 
+
 • ```ConvertHPGLToEPS``` function:
 
   • Reads the HPGL file line by line.
@@ -54,6 +55,7 @@ dotnet run
 • ```HandleCoordinates``` function:
 
   • Parses coordinate values and applies a scaling factor.
+  
 
 ### Example HPGL Input
 ```
@@ -61,6 +63,8 @@ PU100,100;
 PD200,200;
 PA300,300;
 ```
+
+
 ### Example EPS Output
 
 ```
